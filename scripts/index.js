@@ -477,7 +477,7 @@ $(document).ready(function() {
       zoomControl: isMobile ? false : true,
       streetViewControl: isMobile ? false : true,
       mapTypeControl: isMobile ? false : true,
-      zoom: isMobile ? 4 : 5.9
+      zoom: isMobile ? 5.4 : 5.9
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var icons = {};
