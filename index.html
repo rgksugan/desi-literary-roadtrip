@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide to Literary Road Trips</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  </head>
+  <body>
+
+    <div id="map" class="map" style="overflow: hidden;"></div>
+
+    <div id="legend">
+      <div id="legendHed">Guide to<br> Literary Road Trips</div>
+      <div id="legendSubhed">Select a title to see only that route.</div>
+      <div id="legendBooks">
+        <div class="legendBook" data-index="0">
+          <div class="legendBookColor" style="background-color: rgb(234,172, 206)"></div>
+          <div class="legendBookTitle">Travel India</div>
+      </div>
+    </div>
+
+    <div id="legendShowAll" style="padding-top: 3px;">
+      <div class="legendBookColor" style="background-color: #fff; border: 1px solid #333; width: 10px; height: 10px; vertical-align: middle"></div>
+      <span style="display:inline-block; vertical-align: middle;">Show All Routes</span>
+    </div>
+
+    <div id="legendBooksMobile">
+      <select>
+        <option value="all">Select a title</option>
+        <option value="0">Travel India � Jeyamohan</option>
+      </select>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCyV0gNg-AiUB8vxeylMNbxCEn4xKeUm74&amp;sensor=true"></script>
+    <script src="./scripts/miso.ds.deps.ie.min.0.4.0.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

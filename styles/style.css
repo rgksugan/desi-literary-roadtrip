@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#legend {
+  position: absolute;
+  z-index: 4;
+  bottom: 12px;
+  right: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+#legendHed {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+#legendSubhed {
+  padding-bottom: 5px;
+  font-size: 12px;
+
+}
+
+.legendBookCheckbox {
+  display: inline-block;
+  line-height: 18px;
+  height: 12px;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+}
+
+.legendBook {
+  height: 18px;
+  width: 100%;
+  line-height: 18px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+}
+
+.legendBook.selected,.legendBook:hover {
+  color: #000;
+}
+
+.legendBookColor {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.legendBookTitle {
+  display: inline-block;
+  line-height: 24px;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+  font-style: italic;
+}
+
+.gm-style .gm-style-iw {
+  max-width: 300px;
+  font-weight: normal;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+}
+
+.bookPlace {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.bookTitle {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+.bookAuthor {
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1.5em;
+  margin-bottom: 5px;
+}
+
+.bookLink {
+  text-transform: uppercase;
+  color: #aaa;
+  padding: 10px 0;
+  font-size: 11px;
+}
+
+.bookLink a {
+  color: #aaa;
+}
+
+.bookQuote {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+#legendShowAll {
+  font-size: 12px;
+  color: #2473b5;
+  cursor: pointer;
+  padding-top: 2px;
+  color: #666;
+}
+
+#legendShowAll:hover {
+  font-weight: bold;
+}
+
+#legendBooksMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  #legend {
+    display: none;
+  }
+  #legendBooksMobile {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: rgba(200,200,200,.5);
+    padding: 5px 0;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+  }
+  #legendBooksMobile select {
+    max-width: 90%  ;
+    font-size: 16px;
+  }
+
+  .gm-style .gm-style-iw {
+    padding: 2px;
+  }
+}
+
