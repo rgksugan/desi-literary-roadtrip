@@ -425,14 +425,14 @@ $(document).ready(function() {
 
   function getInfoWindowContent(row) {
     var place = row.place;
-    var state = row.state;
-    var combinedPlace = state == place || state == "" ? place : place + ", " + state;
-    combinedPlace = !!row.spot? row.spot + ", " + combinedPlace : combinedPlace;
+    var spot = row.spot;
+    var combinedPlace = spot === place || spot === "" ? place : spot + ", " + place;
+    combinedPlace = combinedPlace + ", " + row.state;
     var content = '<div class="infoWindowContent"><div class="bookPlace">' + combinedPlace + "</div>";
     content += '<div class="bookTitle">' + row.book + "</div>";
     content += '<div class="bookAuthor">by ' + books[row.book].author + "</div>";
     if (!!row.sentence) {
-        content += '<div class="bookQuote">"' + row.sentence + '"</div>';
+      content += '<div class="bookQuote">"' + row.sentence + '"</div>';
     }
     content +=
       '<div class="bookLink">Buy on <a target="_blank" href="' + books[row.book].link + '">Amazon</a></div></div>';
