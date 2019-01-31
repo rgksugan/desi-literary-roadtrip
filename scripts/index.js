@@ -438,6 +438,7 @@ $(document).ready(function() {
       '<div class="bookLink">Buy on <a target="_blank" href="' + books[row.book].link + '">Amazon</a></div></div>';
     return content;
   }
+
   function markerMouseoverHandler(e) {
     var marker = this;
     var row = this.row;
@@ -454,6 +455,7 @@ $(document).ready(function() {
     }
     return false;
   }
+
   function markerClickHandler(e) {
     var marker = this;
     var row = this.row;
@@ -469,6 +471,7 @@ $(document).ready(function() {
     }
     return false;
   }
+
   function drawMap(data) {
     var mapOptions = {
       styles: mapStyles,
@@ -477,7 +480,7 @@ $(document).ready(function() {
       zoomControl: isMobile ? false : true,
       streetViewControl: isMobile ? false : true,
       mapTypeControl: isMobile ? false : true,
-      zoom: isMobile ? 5.4 : 5.9
+      zoom: isMobile ? 5.4 : 5.8
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var icons = {};
