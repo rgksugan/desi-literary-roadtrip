@@ -4,7 +4,8 @@ $(document).ready(function() {
   var books = {
     "Travel India": {
       author: "Jeyamohan",
-      link: "https://www.goodreads.com/book/show/34095194-india-payanam",
+      amazonLink: "https://www.amazon.in/dp/B01N7W3IQN/",
+      goodreadsLink: "https://www.goodreads.com/book/show/34095194-india-payanam",
       index: 0
     }
   };
@@ -435,7 +436,9 @@ $(document).ready(function() {
       content += '<div class="bookQuote">"' + row.sentence + '"</div>';
     }
     content +=
-      '<div class="bookLink">Buy on <a target="_blank" href="' + books[row.book].link + '">Amazon</a></div></div>';
+      '<div class="bookLink">Buy on <a target="_blank" href="' + books[row.book].amazonLink + '">Amazon</a></div></div>';
+    content +=
+      '<div class="bookLink">Checkout the book on <a target="_blank" href="' + books[row.book].goodreadsLink + '">Goodreads</a></div></div>';
     return content;
   }
 
@@ -480,7 +483,7 @@ $(document).ready(function() {
       zoomControl: isMobile ? false : true,
       streetViewControl: isMobile ? false : true,
       mapTypeControl: isMobile ? false : true,
-      zoom: isMobile ? 5.4 : 5.8
+      zoom: isMobile ? 5.4 : 5.7
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var icons = {};
