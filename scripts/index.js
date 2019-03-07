@@ -7,6 +7,12 @@ $(document).ready(function() {
       amazonLink: "https://www.amazon.in/dp/B01N7W3IQN/",
       goodreadsLink: "https://www.goodreads.com/book/show/34095194-india-payanam",
       index: 0
+    },
+    "Kardhungla: Road trip from Chennai to Ladhak": {
+      author: "Kokila Babu",
+      amazonLink: "https://www.amazon.in/gp/product/B07KMB9NNB/",
+      goodreadsLink: "https://www.goodreads.com/book/show/43182701-kardhungla",
+      index: 1
     }
   };
 
@@ -436,9 +442,13 @@ $(document).ready(function() {
       content += '<div class="bookQuote">"' + row.sentence + '"</div>';
     }
     content +=
-      '<div class="bookLink">Buy on <a target="_blank" href="' + books[row.book].amazonLink + '">Amazon</a></div></div>';
+      '<div class="bookLink">Read reviews on <a target="_blank" href="' +
+      books[row.book].goodreadsLink +
+      '">Goodreads</a></div></div>';
     content +=
-      '<div class="bookLink">Checkout the book on <a target="_blank" href="' + books[row.book].goodreadsLink + '">Goodreads</a></div></div>';
+      '<div class="bookLink">Buy on <a target="_blank" href="' +
+      books[row.book].amazonLink +
+      '">Amazon</a></div></div>';
     return content;
   }
 
@@ -478,12 +488,12 @@ $(document).ready(function() {
   function drawMap(data) {
     var mapOptions = {
       styles: mapStyles,
-      center: new google.maps.LatLng(18.018447, 78.8718),
+      center: new google.maps.LatLng(23, 78),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       zoomControl: isMobile ? false : true,
       streetViewControl: isMobile ? false : true,
       mapTypeControl: isMobile ? false : true,
-      zoom: isMobile ? 5.4 : 5.7
+      zoom: isMobile ? 5 : 5
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var icons = {};
