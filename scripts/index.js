@@ -13,6 +13,12 @@ $(document).ready(function() {
       amazonLink: "https://www.amazon.in/gp/product/B07KMB9NNB/",
       goodreadsLink: "https://www.goodreads.com/book/show/43182701-kardhungla",
       index: 1
+    },
+    "Jupiter's Travels": {
+      author: "Ted Simon",
+      amazonLink: "https://www.amazon.in/gp/product/B002RI92RU/",
+      goodreadsLink: "https://www.goodreads.com/book/show/19013591-jupiter-s-travels",
+      index: 2
     }
   };
 
