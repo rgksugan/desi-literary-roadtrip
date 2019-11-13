@@ -2,7 +2,7 @@ $(document).ready(function() {
   var isMobile = $(window).width() < 600;
 
   var books = {
-    "Travel India": {
+    "இந்தியப் பயணம்": {
       author: "Jeyamohan",
       amazonLink: "https://www.amazon.in/dp/B01N7W3IQN/",
       goodreadsLink: "https://www.goodreads.com/book/show/34095194-india-payanam",
@@ -19,6 +19,12 @@ $(document).ready(function() {
       amazonLink: "https://www.amazon.in/gp/product/B002RI92RU/",
       goodreadsLink: "https://www.goodreads.com/book/show/19013591-jupiter-s-travels",
       index: 2
+    },
+    "குகைகளின் வழியே": {
+      author: "Jeyamohan",
+      amazonLink: "https://www.amazon.in/gp/product/B07BJKFHVL/",
+      goodreadsLink: "https://www.goodreads.com/book/show/40859598-kugaigalin-vazhiye",
+      index: 3
     }
   };
 
@@ -445,12 +451,12 @@ $(document).ready(function() {
     content += '<div class="bookTitle">' + row.book + "</div>";
     content += '<div class="bookAuthor">by ' + books[row.book].author + "</div>";
     if (!!row.sentence) {
-      content += '<div class="bookQuote">"' + row.sentence + '"</div>';
+      content += '<div class="bookQuote">"' + row.sentence + '"</div></div>';
     }
     content +=
       '<div class="bookLink">Read reviews on <a target="_blank" href="' +
       books[row.book].goodreadsLink +
-      '">Goodreads</a></div></div>';
+      '">Goodreads</a></div>';
     content +=
       '<div class="bookLink">Buy on <a target="_blank" href="' +
       books[row.book].amazonLink +
